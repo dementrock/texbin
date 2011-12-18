@@ -1,0 +1,54 @@
+// Place all the styles related to the Gists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$text-width: 700px
+
+.sass-center
+  :margin-left auto
+  :margin-right auto
+
+#gist_content
+  :font-size 13px
+  :resize none
+  :font-family Times, "Times New Roman", serif
+  :padding 3px
+  :width $text-width
+
+.preview
+  :width $text-width
+  @extend .sass-center
+
+.content
+  :width $text-width
+  @extend .sass-center
+
+
+.preview-content, .render-texmd
+  :width $text-width
+  :padding 3px
+  :word-wrap break-word
+  :border 2px dotted #d1d1d1
+  :font-family Times, "Times New Roman", serif
+  :text-align left
+
+
+.clearfix:after
+  :content "."
+  :display block
+  :clear both
+  :visibility hidden
+  :line-height 0
+  height 0
+
+.clearfix
+  :display inline-block
+
+html[xmlnx] .clearfix
+  :display block
+
+* html .clearfix
+  :height 1%
+
+.new_gist
+  :text-align center

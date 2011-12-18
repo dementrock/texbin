@@ -1,0 +1,27 @@
+<h1>Listing gists</h1>
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gists.each do |gist| %>
+  <tr>
+    <td><%= gist.key %></td>
+    <td><%= gist.title %></td>
+    <td><%= gist.content %></td>
+    <td><%= link_to 'Show', short_gist_path(gist) %></td>
+    <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
+    <td><%= link_to 'Destroy', gist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gist', new_gist_path %>
