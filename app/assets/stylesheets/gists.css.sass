@@ -12,8 +12,10 @@ $text-width: 700px
   :font-size 13px
   :resize none
   :font-family Times, "Times New Roman", serif
-  :padding 3px
+  :padding 10px
   :width $text-width
+  :outline none
+  :border 2px dotted #d1d1d1
 
 .preview
   :width $text-width
@@ -25,8 +27,8 @@ $text-width: 700px
 
 
 .preview-content, .render-texmd
-  :width $text-width
-  :padding 3px
+  :width $text-width - 2
+  :padding 10px
   :word-wrap break-word
   :border 2px dotted #d1d1d1
   :font-family Times, "Times New Roman", serif

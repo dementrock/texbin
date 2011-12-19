@@ -1,14 +1,11 @@
 = form_for(@gist) do |f|
   - if @gist.errors.any?
     #error_explanation
-      %h2
-        ==#{pluralize(@gist.errors.count, "error")} prohibited this gist from being saved:
-      %ul
-        - @gist.errors.full_messages.each do |msg|
-          %li= msg
+      - @gist.errors.full_messages.each do |msg|
+        = msg
   .field.content
     = f.text_area :content
   .field.preview
     .preview-content.render-texmd
   .actions
-    = f.submit
+    = submit_tag "Submit", :confirm => 'Note that you cannot make any change afterwards.'

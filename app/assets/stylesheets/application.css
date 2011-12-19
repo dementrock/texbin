@@ -6,7 +6,39 @@
  *= require_tree . 
 */
 
-h1.title {
+.title {
   text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
+.title a {
+    text-decoration: none;
+    color: black;
+}
+
+.title a:hover {
+    background: none;
+    color: black;
+}
+
+.title a:visited {
+    color: black;
+}
+
+.title-left {
+    color: black;
+}
+
+.title-right {
+    color: #0c0;
+}
+
+.subtitle {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    margin-bottom: 20px;
+}

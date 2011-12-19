@@ -19,6 +19,7 @@ sync_input = (elem1, elem2, action) ->
 $(document).ready () ->
   MathJax.Hub.Queue(["Typeset",MathJax.Hub])
   if $("#gist_content")[0] != undefined
+    $("#gist_content").focus()
     sync_input $("#gist_content"), $(".render-texmd"), (elem1, elem2) ->
       $(".render-texmd").html(showdown_converter.makeHtml($("#gist_content").attr("value")))
       MathJax.Hub.Queue(["Typeset",MathJax.Hub])

@@ -17,7 +17,17 @@
     = javascript_include_tag "https://raw.github.com/coreyti/showdown/master/src/showdown.js"
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
+    = javascript_include_tag "http://www.steamdev.com/zclip/js/jquery.zclip.min.js"
     = csrf_meta_tags
   %body
-    %h1.title TexBin
+    .title
+      %a(href='/')><
+        %span.title-left><
+          TexB
+        %span.title-right><
+          in
+    .subtitle
+      With Markdown and $\LaTeX$
+      %br/
+      Share your inspiration in a flash.
     = yield

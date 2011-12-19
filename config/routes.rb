@@ -1,8 +1,11 @@
 Mathgist::Application.routes.draw do
 
-  root :to => 'gists#new'
+  match '/' => 'gists#new'
 
-  resources :gists
+  match '/gists' => 'gists#create'
+  #root :to => 'gists#new'
+
+  #resources :gists
 
   match '/:id' => 'gists#show', :as => :short_gist
 
