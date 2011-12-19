@@ -5,16 +5,18 @@
 showdown_converter = new Showdown.converter()
 
 sync_input = (elem1, elem2, action) ->
-  try
-    elem1[0].watch "value", (id, old, current) ->
-      action elem1, elem2
-  catch e
-    act = () -> action elem1, elem2
-    elem1[0].onchange = act
-    elem1[0].onpropertychange = act
-    elem1[0].oninput = act
-    elem1[0].onmouseover = act
-    elem1[0].onkeyup = act
+  elem1[0].watch "value", (id, old, current) ->
+    action elem1, elem2
+  act = () -> action elem1, elem2
+  elem1[0].onchange = act
+  elem1[0].onpropertychange = act
+  elem1[0].oninput = act
+  elem1[0].onmouseover = act
+  elem1[0].onkeyup = act
+  elem1[0].onkeydown = act
+  elem1[0].onkeypress = act
+  elem1[0].textInput = act
+
 
 $(document).ready () ->
   MathJax.Hub.Queue(["Typeset",MathJax.Hub])
