@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20111218231036) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "primary_key"
     t.string   "key"
+    t.string   "primary_key"
   end
 
 end
