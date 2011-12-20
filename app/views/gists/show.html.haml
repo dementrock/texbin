@@ -1,7 +1,7 @@
 - if @isnil
   %center Does not exist.
 - else
-  .content.render-texmd
+  .content.show-content.render-texmd
     = raw(BlueCloth::new(h(@gist.content)).to_html)
   %p
     %center

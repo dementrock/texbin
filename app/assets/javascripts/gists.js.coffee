@@ -5,8 +5,8 @@
 showdown_converter = new Showdown.converter()
 
 sync_input = (elem1, elem2, action) ->
-  elem1[0].watch "value", (id, old, current) ->
-    action elem1, elem2
+  #elem1[0].watch "value", (id, old, current) ->
+  #  action elem1, elem2
   act = () -> action elem1, elem2
   elem1[0].onchange = act
   elem1[0].onpropertychange = act
