@@ -1,13 +1,14 @@
-.hint
-  Enclose inline formula with \$\$ or display style with \$\$\$\$.
 = form_for(@gist) do |f|
   - if @gist.errors.any?
     #error_explanation
       - @gist.errors.full_messages.each do |msg|
         = msg
-  .field.content
-    = f.text_area :content
-  .field.preview
-    .preview-content.render-texmd
-  .actions
-    = submit_tag "Submit", :confirm => 'Note that you cannot make any change afterwards.'
+  .content
+    .leftbar
+      .textwrapper
+        = f.text_area :content, :cols => 1, :rows => 1
+      .actions
+        = submit_tag "Submit", :confirm => 'Note that you cannot make any change afterwards.'
+
+    .preview-wrapper
+      .preview-content.render-texmd

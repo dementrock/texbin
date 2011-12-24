@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$text-width: 700px
-
+.content
+  :height 70%
 .sass-center
   :margin-left auto
   :margin-right auto
@@ -12,28 +12,45 @@ $text-width: 700px
   :font-size 13px
   :resize none
   :font-family Times, "Times New Roman", serif
-  :padding 10px
-  :width $text-width
   :outline none
-  :border 2px dotted #d1d1d1
+  :width 100%
+  :border none
+  :height 300px
+  :overflow hidden
 
 .preview
-  :width $text-width
+  :width 46%
   @extend .sass-center
 
 .content
-  :width $text-width
+  :width 90%
+  :overflow hidden
   @extend .sass-center
 
 
-.preview-content, .render-texmd
-  :width $text-width - 2
-  :padding 10px
-  :word-wrap break-word
+.preview-wrapper
   :border 2px dotted #d1d1d1
+  :float right
+  :width 46%
+  :padding 10px
+
+.preview-content, .render-texmd
+  :word-wrap break-word
   :font-family Times, "Times New Roman", serif
   :text-align left
+  :overflow hidden
 
+.leftbar
+  :float left
+  :width 46%
+
+.textwrapper
+  :border 2px dotted #d1d1d1
+  :overflow hidden
+  :padding 10px
+
+.render-texmd
+  :width 700px
 
 .clearfix:after
   :content "."
