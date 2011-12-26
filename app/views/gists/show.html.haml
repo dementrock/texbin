@@ -1,8 +1,9 @@
 - if @isnil
   %center Does not exist.
 - else
-  .content.show-content.render-texmd
-    = raw(BlueCloth::new(h(@gist.content)).to_html)
+  .content-wrapper
+    .show-content.render-texmd
+      = raw(process(@gist.content))
   %p
     %center
       = link_to @current_url, short_gist_path(@gist)

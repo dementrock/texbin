@@ -2,8 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .content
   :height 70%
+
 .sass-center
   :margin-left auto
   :margin-right auto
@@ -18,6 +20,9 @@
   :height 300px
   :overflow hidden
 
+.panel
+  :border 2px dotted #ccc
+
 .preview
   :width 46%
   @extend .sass-center
@@ -27,11 +32,24 @@
   :overflow hidden
   @extend .sass-center
 
+.panel-label
+  :color #ccc
+  :font-style italic
 
-.preview-wrapper
-  :border 2px dotted #d1d1d1
+.rightbar
   :float right
   :width 46%
+
+.content-wrapper
+  @extend .panel
+  @extend .sass-center
+  :width 80%
+  :padding 10px
+
+.preview-wrapper
+  @extend .panel
+  //:float right
+  //:width 46%
   :padding 10px
 
 .preview-content, .render-texmd
@@ -45,9 +63,11 @@
   :width 46%
 
 .textwrapper
-  :border 2px dotted #d1d1d1
   :overflow hidden
   :padding 10px
+  //:padding-top 25px
+  :position relative
+  @extend .panel
 
 .render-texmd
   :width 700px
@@ -73,7 +93,7 @@ html[xmlnx] .clearfix
   :text-align center
 
 .show-content
-  :width 680px
+  :width 100%
 
 .hint
   :width 700px
@@ -82,3 +102,14 @@ html[xmlnx] .clearfix
   :text-align left
   :color gray
   :margin-bottom 10px
+
+.submit
+  :background none
+  :border none
+  :font-size 20px
+  :outline none
+
+.submit:hover, .submit:focus
+  :text-shadow 0px 0px 5px gray
+  :font-size 25px
+  :cursor pointer

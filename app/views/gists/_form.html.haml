@@ -5,10 +5,14 @@
         = msg
   .content
     .leftbar
+      .panel-label
+        Content
       .textwrapper
         = f.text_area :content, :cols => 1, :rows => 1
       .actions
-        = submit_tag "Submit", :confirm => 'Note that you cannot make any change afterwards.'
-
-    .preview-wrapper
-      .preview-content.render-texmd
+        = submit_tag "✓", :class => "submit"
+    .rightbar
+      .panel-label
+        Preview
+      .preview-wrapper
+        .preview-content.render-texmd

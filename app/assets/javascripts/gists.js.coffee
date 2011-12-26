@@ -23,10 +23,11 @@ adjust_size = () ->
   #h_subtitle = $('.subtitle').height()
   #h_hint = $('.hint').height()
   h_window = $(window).height()
-  h_content = parseInt((h_window - h_title) * 0.8)
+  h_content = parseInt((h_window - h_title) * 0.7)
   $('#gist_content').css('min-height', h_content + 'px')
   $('.textwrapper').css('min-height', h_content + 'px')
-  $('.preview-wrapper').css('min-height', h_content + 'px')
+  $('.preview-wrapper').css('min-height', (h_content) + 'px')
+  $('.content-wrapper').css('min-height', (h_content) + 'px')
 
 sync_height = () ->
   new_height = Math.max($('.textwrapper').height(), $('.preview-content').height())
@@ -75,10 +76,9 @@ $(document).ready () ->
 
     return this
 
-
-  $("#gist_content").TextAreaExpander()
   MathJax.Hub.Queue(["Typeset",MathJax.Hub])
   if $("#gist_content")[0] != undefined
+    $("#gist_content").TextAreaExpander()
     $("#gist_content").focus()
     sync_input $("#gist_content"), $(".render-texmd"), (elem1, elem2) ->
       $(".render-texmd").html(showdown_converter.makeHtml($("#gist_content").attr("value")))
