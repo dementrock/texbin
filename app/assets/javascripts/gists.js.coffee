@@ -42,6 +42,9 @@ update_height = (h) ->
 $(document).ready () ->
   adjust_size()
   #$(window).resize(adjust_size)
+  
+  if $("#clippy-current-url") != undefined
+    $("#clippy-current-url").clippy()
 
   $.fn.TextAreaExpander = (minHeight, maxHeight) ->
     hCheck = not ($.browser.msie or $.browser.opera)

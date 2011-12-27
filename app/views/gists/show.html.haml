@@ -6,4 +6,8 @@
       = raw(process(@gist.content))
   %p
     %center
-      = link_to @current_url, short_gist_path(@gist)
+      Current URL:
+      %span#current-url
+        = @current_url
+      %span#clippy-current-url><
+        = @current_url
