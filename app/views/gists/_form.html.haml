@@ -4,15 +4,11 @@
       - @gist.errors.full_messages.each do |msg|
         = msg
   .content
-    .leftbar
-      .panel-label
-        Content
-      .textwrapper
-        = f.text_area :content, :cols => 1, :rows => 1
-      .actions
-        = submit_tag "✓", :class => "submit"
-    .rightbar
-      .panel-label
-        Preview
-      .preview-wrapper
-        .preview-content.render-texmd
+    .textwrapper
+      = f.text_area :content, :cols => 1, :rows => 1
+    .actions
+      = submit_tag "✓", :class => "submit"
+    .preview-header
+      Preview
+    .preview-wrapper
+      .preview-content.render-texmd

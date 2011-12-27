@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .content
   :height 70%
 
@@ -18,7 +17,7 @@
   :width 100%
   :border none
   :height 300px
-  :overflow hidden
+  //:overflow hidden
 
 .panel
   :border 2px dotted #ccc
@@ -46,31 +45,33 @@
   :width 80%
   :padding 10px
 
+.preview-header
+  :font-style italic
+  :color gray
+
 .preview-wrapper
   @extend .panel
   //:float right
   //:width 46%
   :padding 10px
+  :margin-bottom 60px
 
 .preview-content, .render-texmd
   :word-wrap break-word
   :font-family Times, "Times New Roman", serif
   :text-align left
-  :overflow hidden
+  //:overflow hidden
 
 .leftbar
   :float left
   :width 46%
 
 .textwrapper
-  :overflow hidden
+  //:overflow hidden
   :padding 10px
   //:padding-top 25px
   :position relative
   @extend .panel
-
-.render-texmd
-  :width 700px
 
 .clearfix:after
   :content "."
@@ -95,14 +96,6 @@ html[xmlnx] .clearfix
 .show-content
   :width 100%
 
-.hint
-  :width 700px
-  :margin-left auto
-  :margin-right auto
-  :text-align left
-  :color gray
-  :margin-bottom 10px
-
 .submit
   :background none
   :border none
@@ -113,3 +106,6 @@ html[xmlnx] .clearfix
   :text-shadow 0px 0px 5px gray
   :font-size 25px
   :cursor pointer
+
+.actions
+  :height 30px

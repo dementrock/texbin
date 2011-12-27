@@ -21,10 +21,14 @@
     /*= javascript_include_tag "http://blogs.sitepointstatic.com/examples/tech/textarea-expander/jquery.textarea-expander.js"*/
     = csrf_meta_tags
   %body
-    .title
-      %a(href='/')><
-        %span.title-left><
-          TexB
-        %span.title-right><
-          in
+    .header
+      .title
+        %a(href='/')><
+          %span.title-left><
+            TexB
+          %span.title-right><
+            in
+      .links
+        = link_to "help", GIST_CONFIG['help_url']
+        = link_to "github", 'https://github.com/dementrock/texbin'
     = yield

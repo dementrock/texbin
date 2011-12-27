@@ -10,7 +10,7 @@ class GistsController < ApplicationController
     if @gist.nil?
       @isnil = true
     end
-
+    
     @current_url = request.url
 
     respond_to do |format|

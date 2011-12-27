@@ -11,12 +11,21 @@ body {
   margin: 0;
 }
 
-.title {
-  text-align: center;
-  font-size: 2em;
+.header {
   padding-top: 2%;
+  text-align: center;
+  padding-bottom: 1%;
+}
+
+.title {
+  font-size: 2em;
   font-weight: bold;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+}
+
+.links a {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .title a {
