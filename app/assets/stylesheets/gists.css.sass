@@ -5,6 +5,11 @@
 .content
   :height 70%
 
+.wrapper-paddings
+  :padding 10px
+  :padding-left 25px
+  :padding-right 25px
+
 .sass-center
   :margin-left auto
   :margin-right auto
@@ -27,7 +32,7 @@
   @extend .sass-center
 
 .content
-  :width 90%
+  :width 60%
   :overflow hidden
   @extend .sass-center
 
@@ -42,8 +47,8 @@
 .content-wrapper
   @extend .panel
   @extend .sass-center
-  :width 80%
-  :padding 10px
+  :width 60%
+  @extend .wrapper-paddings
 
 .preview-header
   :font-style italic
@@ -51,25 +56,20 @@
 
 .preview-wrapper
   @extend .panel
-  //:float right
-  //:width 46%
-  :padding 10px
+  @extend .wrapper-paddings
   :margin-bottom 60px
 
 .preview-content, .render-texmd
   :word-wrap break-word
   :font-family Times, "Times New Roman", serif
   :text-align left
-  //:overflow hidden
 
 .leftbar
   :float left
   :width 46%
 
 .textwrapper
-  //:overflow hidden
-  :padding 10px
-  //:padding-top 25px
+  :padding 25px
   :position relative
   @extend .panel
 
