@@ -1,9 +1,10 @@
 - if @isnil
   %center Does not exist.
 - else
-  .content-wrapper
-    .show-content.render-texmd
-      = raw(process(@gist.content))
+  .content
+    .content-wrapper
+      .show-content.render-texmd
+        = raw(process(@gist.content))
   %p
     %center
       Current URL:
