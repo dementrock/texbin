@@ -1,6 +1,6 @@
 Mathgist::Application.routes.draw do
 
-  match '/' => 'gists#new'
+  match '/' => 'gists#new', :as => :gist_new
 
   match '/gists' => 'gists#create'
   #root :to => 'gists#new'
@@ -8,6 +8,7 @@ Mathgist::Application.routes.draw do
   #resources :gists
 
   match '/:id' => 'gists#show', :as => :short_gist
+  match '/:id/raw' => 'gists#show_raw', :as => :short_gist_raw
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

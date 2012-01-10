@@ -5,6 +5,17 @@ end
 
 class GistsController < ApplicationController
 
+  def show_raw
+    @gist = get_gist_from params
+    if @gist.nil?
+      @isnil = true
+    end
+    
+    respond_to do |format|
+      format.html { render :layout => false}
+    end
+  end
+
   def show
     @gist = get_gist_from params
     if @gist.nil?
@@ -40,7 +51,7 @@ class GistsController < ApplicationController
           format.html { redirect_to short_gist_path(@gist), :notice => 'Gist was successfully created.' }
           format.json { render :json => @gist, :status => :created, :location => @gist }
         else
-          format.html { render :action => "new" }
+          format.html { redirect_to gist_new_path }
           format.json { render :json => @gist.errors, :status => :unprocessable_entity }
         end
       end

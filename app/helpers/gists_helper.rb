@@ -1,3 +1,5 @@
+require 'rdiscount'
+
 module GistsHelper
   def process x
     latex_marker = "TEXBINTOREPLACE"
@@ -24,7 +26,7 @@ module GistsHelper
       x = x[0...start_id] + latex_marker + x[end_id+1..-1]
     end
     puts x
-    x = BlueCloth::new(h(x)).to_html
+    x = RDiscount.new(h(x)).to_html
     latex_list.each do |latex|
       (0...x.length).each do |i|
         if x[i...i+latex_marker.length] == latex_marker

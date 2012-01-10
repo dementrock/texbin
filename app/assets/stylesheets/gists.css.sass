@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.content
-  :height 70%
-
 .wrapper-paddings
   :padding 10px
   :padding-left 25px
@@ -15,7 +12,7 @@
   :margin-right auto
 
 #gist_content
-  :font-size 13px
+  :font-size 16px
   :resize none
   :font-family Times, "Times New Roman", serif
   :outline none
@@ -32,7 +29,8 @@
   @extend .sass-center
 
 .content
-  :width 50%
+  :font-size 16px
+  :width 45%
   :overflow hidden
   @extend .sass-center
 
@@ -56,7 +54,8 @@
 .preview-wrapper
   @extend .panel
   @extend .wrapper-paddings
-  :margin-bottom 60px
+  :margin-top 30px
+  :margin-bottom 10px
 
 .preview-content, .render-texmd
   :word-wrap break-word
@@ -103,8 +102,8 @@ html[xmlnx] .clearfix
 
 .submit:hover, .submit:focus
   :text-shadow 0px 0px 5px gray
-  :font-size 25px
   :cursor pointer
 
 .actions
   :height 30px
+  :margin-bottom 60px

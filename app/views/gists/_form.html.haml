@@ -1,14 +1,8 @@
 = form_for(@gist) do |f|
-  - if @gist.errors.any?
-    #error_explanation
-      - @gist.errors.full_messages.each do |msg|
-        = msg
   .content
     .textwrapper
       = f.text_area :content, :cols => 1, :rows => 1
-    .actions
-      = submit_tag "✓", :class => "submit"
-    .preview-header
-      Preview
     .preview-wrapper
       .preview-content.render-texmd
+    .actions
+      = submit_tag "✓", :class => "submit"
