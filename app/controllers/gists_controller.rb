@@ -2,8 +2,18 @@ def get_gist_from params
     (Gist.where(:key => params[:id]))[0]
 end
 
-
 class GistsController < ApplicationController
+
+  def show_simple
+    @gist = get_gist_from params
+    if @gist.nil?
+      @isnil = true
+    end
+    
+    respond_to do |format|
+      format.html { render :layout => false}
+    end
+  end
 
   def show_raw
     @gist = get_gist_from params

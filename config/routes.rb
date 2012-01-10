@@ -9,6 +9,7 @@ Mathgist::Application.routes.draw do
 
   match '/:id' => 'gists#show', :as => :short_gist
   match '/:id/raw' => 'gists#show_raw', :as => :short_gist_raw
+  match '/:id/simple' => 'gists#show_simple', :as => :short_gist_simple
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
