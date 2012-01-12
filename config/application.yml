@@ -1,0 +1,5 @@
+image:
+    directory: ./public/
+    command: wkhtmltoimage --width 600 --quality 100 --window-status finished
+    timeout: 60
+    sleep_interval: 3

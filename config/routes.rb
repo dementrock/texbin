@@ -7,9 +7,10 @@ Mathgist::Application.routes.draw do
 
   #resources :gists
 
-  match '/:id' => 'gists#show', :as => :short_gist
-  match '/:id/raw' => 'gists#show_raw', :as => :short_gist_raw
-  match '/:id/simple' => 'gists#show_simple', :as => :short_gist_simple
+  match '/:id.raw' => 'gists#show', :as => :short_gist_raw, :show_type => 'raw', :id => /\w+/
+  match '/:id.simple' => 'gists#show', :as => :short_gist_simple, :show_type => 'simple', :id => /\w+/
+  match '/:id.jpg' => 'gists#show_image', :as => :short_gist_image, :show_type => 'image', :id => /\w+/
+  match '/:id' => 'gists#show', :as => :short_gist, :show_type => 'normal', :id => /\w+/
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

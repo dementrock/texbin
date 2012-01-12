@@ -1,2 +1,2 @@
 MathJax.Hub.Queue () ->
-  window.status = "finished"
+  setTimeout "window.status = 'finished'", 5000

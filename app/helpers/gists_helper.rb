@@ -8,7 +8,6 @@ module GistsHelper
       exists, start_id, end_id = false, 0, 0
       (0...x.length).each do |i|
         if x[i..i] == "$"
-          puts "yeah"
           (i+1...x.length).each do |j|
             if x[j..j] == "$"
               exists, start_id, end_id = true, i, j
@@ -21,11 +20,10 @@ module GistsHelper
       if not exists
         break
       end
-      puts "exists"
       latex_list.push(x[start_id..end_id])
       x = x[0...start_id] + latex_marker + x[end_id+1..-1]
     end
-    puts x
+    #puts x
     x = RDiscount.new(h(x)).to_html
     latex_list.each do |latex|
       (0...x.length).each do |i|

@@ -58,4 +58,6 @@ Mathgist::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.action_mailer.default_url_options = { :host => 'texb.in' }
+  Rails.application.routes.default_url_options = config.action_mailer.default_url_options
 end

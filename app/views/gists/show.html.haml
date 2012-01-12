@@ -2,13 +2,21 @@
   %center Does not exist.
 - else
   .content
+    .gist-link
+      = link_to "raw", short_gist_raw_path(@gist)
+      - if @gist.image_finished?
+        = link_to "image", short_gist_image_path(@gist)
+      - elsif @gist.image_status == 'wait'
+        (image waiting)
+      - elsif @gist.image_status == 'loading'
+        (image loading)
+      - elsif @gist.image_status == 'tle' or @gist.image_status == 'error'
+        (image unavailable)
     .content-wrapper
       .show-content.render-texmd
         = raw(process(@gist.content))
   %p
     %center
-      Current URL:
-      %span#current-url
-        = @current_url
+      Copy current URL:
       %span#clippy-current-url><
         = @current_url

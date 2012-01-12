@@ -23,6 +23,10 @@ gem 'haml'
 
 gem 'rdiscount'
 
+gem 'remove_white_border'
+
+gem 'rmagick'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

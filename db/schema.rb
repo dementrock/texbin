@@ -10,14 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111218231036) do
+ActiveRecord::Schema.define(:version => 20120111163607) do
 
   create_table "gists", :force => true do |t|
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "key"
     t.string   "primary_key"
+    t.string   "key"
+    t.string   "image_status", :default => "wait"
   end
 
 end
