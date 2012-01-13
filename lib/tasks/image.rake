@@ -10,7 +10,7 @@ namespace :image do
     $sleep_interval = APP_CONFIG['image']['sleep_interval']
     while true
       puts 'running'
-      gist_queue = Gist.where :image_status => ['wait', 'loading']
+      gist_queue = Gist.where :image_status => ['wait', 'loading', 'error']
       gist_queue.each do |gist|
         begin
           gist.image_status = 'loading'
@@ -33,13 +33,10 @@ namespace :image do
             gist.image_status = 'tle'
             gist.save
           end
-          if is_finished
-            TrimImage::Trimmer.new(gist_saved_path).write          
-          end
         rescue Exception => e
           gist.image_status = 'error'
           gist.save
-          puts e          
+          Rails.logger.info e.to_s
         end
       end
       sleep $sleep_interval
