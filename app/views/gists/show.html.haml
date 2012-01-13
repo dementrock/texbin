@@ -4,6 +4,7 @@
   .content
     .gist-link
       = link_to "raw", short_gist_raw_path(@gist)
+      = link_to "simple", short_gist_simple_path(@gist)
       - if @gist.image_finished?
         = link_to "image", short_gist_image_path(@gist)
       - elsif @gist.image_status == 'wait'
